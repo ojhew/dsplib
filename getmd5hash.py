@@ -1,3 +1,5 @@
+import hashlib
+
 def getmd5hash(fc):
     m = hashlib.md5()
     m.update(fc)
