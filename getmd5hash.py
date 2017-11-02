@@ -1,15 +1,17 @@
-def getmd5hash(fc):
-    m = hashlib.md5()
+import hashlib
+
+def getsha1hash(fc):
+    m = hashlib.sha1()
     m.update(fc)
     print(m.hexdigest())
     return m.hexdigest()
 
-def getmd5hash():
+def getsha1hash():
     path = input("Enter file path: ")
     try:
         fo = open(path, "rb");
         fstr = fo.read();
-        hashStr = getmd5hash(fstr)
+        hashStr = getsha1hash(fstr)
         print(hashStr);
         fo.close();
     except:
